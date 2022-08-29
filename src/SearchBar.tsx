@@ -15,7 +15,7 @@ const SearchBar: React.FC = (props) =>{
   const navigate = useNavigate();
 
    // onChange search bar handler
-   /** This handler will be called when user tayping input value in the search bar */
+   /** This handler will be called when a user types the input value in the search bar */
  const onChangeHandler = (text: React.SetStateAction<string>) =>{
     setText(text)
     if(text.length === 0)
@@ -26,28 +26,28 @@ const SearchBar: React.FC = (props) =>{
    }
    
    // onClick search bar handler
-      /** This handler will be called when user pressed on the search bar itself */
+      /** This handler will be called when the user presses on the search bar itself */
    const onClickHandler = () =>{
     // If search bar is empty then call full workers list
     if(!text){
           getWorkersList('')
     }
    }
-   /** This handler will be called when user pressed on a worker in the list */
-   // const onWorkerClickHandler = (text: React.SetStateAction<string>) =>{
+   // onClick workers click handler
+   /** This handler will be called when the user presses on a worker in the list */
    const onWorkerSearchkHandler = (id: any) =>{
     navigate('/SearchResults', {state: id})
     
    }
 
-   /** This handler will be called if user pressed enter in the searching bar */
+   /** This handler will be called if the user clicks enter in the searching bar */
    const onEnterPress = (e:any) =>{
         if(e.key === 'Enter')
         onWorkerSearchkHandler(workers)
    }
    /**
     * This function will send a request to the api
-    */
+    * The function will keep the api results in workers */
    function getWorkersList(str: any): void{
     fetch(apiAddress.API_URL + str, {
         method: "GET"

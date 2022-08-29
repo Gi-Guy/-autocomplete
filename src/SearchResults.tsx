@@ -13,12 +13,13 @@ import './SearchBar.css';
 
 const SearchResults: React.FC = () =>{
 
-    // Keeping the worker's id from Search bar selection.
+    // Keeping the searching results
     const location = useLocation();
     const state = location.state as CustomizedState;
     let workersArray: CustomizedState[] = []
+
     // Keeping state objects into array
-    // Checking if state already has an array
+    // Checking if state is already an array
     if(Array.isArray(state)){
       workersArray = state
     } else{// state object isn't an array list

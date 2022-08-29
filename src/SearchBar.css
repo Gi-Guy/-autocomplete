@@ -23,13 +23,11 @@
   .scrollable-div2 {
     background-color: #ffffff;
     height: 500px;
-    overflow: auto;
     margin: 10px;
     text-align: justify;
     padding: 20px;
-    position:absolute;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
   }
-  /*
-    background: transparent;
-    position:fixed;  
-  */
