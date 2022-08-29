@@ -1,8 +1,8 @@
 
 import React, { useState } from 'react';
-import {apiAddress} from './ApiAddress';
-import './SearchBar.css';
+import {apiAddress} from '../ApiAddress';
 import { useNavigate } from 'react-router-dom';
+import './SearchBar.css';
 
 const SearchBar: React.FC = (props) =>{
     
@@ -42,8 +42,12 @@ const SearchBar: React.FC = (props) =>{
 
    /** This handler will be called if the user clicks enter in the searching bar */
    const onEnterPress = (e:any) =>{
-        if(e.key === 'Enter')
-        onWorkerSearchkHandler(workers)
+        if(e.key === 'Enter'){
+          onWorkerSearchkHandler(workers)
+          setWorkers([])
+          setText('')
+
+        }
    }
    /**
     * This function will send a request to the api

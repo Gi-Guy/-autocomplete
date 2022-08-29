@@ -22,6 +22,10 @@
   }
   .scrollable-div2 {
     background-color: #ffffff;
+    justify-content: center;
+    position: fixed;
+    align-items: center;
+    align-items: center;
     height: 500px;
     margin: 10px;
     text-align: justify;
@@ -29,5 +33,4 @@
     overflow: hidden;
     overflow-x: hidden;
     overflow-y: auto;
-    position: absolute;
   }

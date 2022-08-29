@@ -1,12 +1,9 @@
 
 import { BrowserRouter, Routes ,Route } from 'react-router-dom';
 import './App.css';
-import SearchPage from './SearchPage';
-import SearchResults from './SearchResults';
+import SearchPage from './Components/SearchPage';
+import SearchResults from './Components/SearchResults';
 
-
-
-//<SearchBar />
 function App() {
   return (
     <div className="App">
